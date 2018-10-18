@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3351EB949E2866677177AEF9 /* Pods_Checklists.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01FCE162B97B6A50C78606E7 /* Pods_Checklists.framework */; };
 		462B68097086586CD56A95A9 /* Pods_ChecklistsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1956B559C1590FA20EBF6F89 /* Pods_ChecklistsTests.framework */; };
+		60D02EED217938BD008DAF6C /* CheckListItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D02EEC217938BD008DAF6C /* CheckListItemSpec.swift */; };
 		B28B4839206F041D00144754 /* ChecklistDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B4838206F041D00144754 /* ChecklistDataPersistence.swift */; };
 		B2BACE4A206AC614009ECA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BACE49206AC614009ECA6B /* AppDelegate.swift */; };
 		B2BACE4C206AC614009ECA6B /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BACE4B206AC614009ECA6B /* ChecklistViewController.swift */; };
@@ -45,6 +46,7 @@
 		1956B559C1590FA20EBF6F89 /* Pods_ChecklistsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChecklistsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		25A02CEEF83C64EE74CA908F /* Pods-ChecklistsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsUITests/Pods-ChecklistsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		29CDF32C139F88E4EF1A4EDE /* Pods-ChecklistsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsTests/Pods-ChecklistsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		60D02EEC217938BD008DAF6C /* CheckListItemSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItemSpec.swift; sourceTree = "<group>"; };
 		8272B802144BBEA454579DA8 /* Pods-Checklists.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checklists.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Checklists/Pods-Checklists.debug.xcconfig"; sourceTree = "<group>"; };
 		870A10A63378A757BDAA3FE8 /* Pods-ChecklistsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsTests/Pods-ChecklistsTests.release.xcconfig"; sourceTree = "<group>"; };
 		B21635BD861D5A8C00BE5311 /* Pods-ChecklistsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsUITests/Pods-ChecklistsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 			children = (
 				B2BACE5E206AC614009ECA6B /* ChecklistsTests.swift */,
 				B2BACE60206AC614009ECA6B /* Info.plist */,
+				60D02EEC217938BD008DAF6C /* CheckListItemSpec.swift */,
 			);
 			path = ChecklistsTests;
 			sourceTree = "<group>";
@@ -316,15 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ChecklistsUITests-checkManifestLockResult.txt",
 			);
@@ -338,15 +337,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-Checklists-checkManifestLockResult.txt",
 			);
@@ -360,15 +355,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ChecklistsTests-checkManifestLockResult.txt",
 			);
@@ -382,16 +373,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Checklists/Pods-Checklists-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
@@ -421,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60D02EED217938BD008DAF6C /* CheckListItemSpec.swift in Sources */,
 				B2BACE5F206AC614009ECA6B /* ChecklistsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
