@@ -20,11 +20,7 @@ class ChecklistDataProvider: ChecklistDataProviderDelegate {
     
     let persistence = ChecklistDataPersistence()
     
-    var data: [ChecklistItem] = [ChecklistItem(text: "Walk the dog", checked: false),
-                                 ChecklistItem(text: "Brush my teeth", checked: true),
-                                 ChecklistItem(text: "Learn iOS development", checked: true),
-                                 ChecklistItem(text: "Soccer practice", checked: false),
-                                 ChecklistItem(text: "Eat ice cream", checked: false)]
+    var data: [ChecklistItem] = []
     
     func getItems() -> [ChecklistItem] {
         let loadedItems = persistence.loadChecklistItems()

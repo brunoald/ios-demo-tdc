@@ -8,16 +8,13 @@
 
 import Foundation
 
-class ChecklistDataPersistence {
-    func documentsDirectory() -> URL {
-        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-        return paths[0]
-    }
-    
-    func dataFilePath() -> URL {
-        return documentsDirectory().appendingPathComponent("Checklists.plist")
-    }
-    
+protocol ChecklistDataPersistenceDelegate {
+    func saveChecklistItems(items: [ChecklistItem])
+    func loadChecklistItems() -> [ChecklistItem]
+    func eraseAll()
+}
+
+class ChecklistDataPersistence: ChecklistDataPersistenceDelegate {
     func saveChecklistItems(items: [ChecklistItem]) {
         let encoder = PropertyListEncoder()
         
@@ -42,5 +39,18 @@ class ChecklistDataPersistence {
             }
         }
         return []
+    }
+    
+    func eraseAll() {
+        saveChecklistItems(items: [])
+    }
+    
+    private func documentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    private func dataFilePath() -> URL {
+        return documentsDirectory().appendingPathComponent("Checklists.plist")
     }
 }
