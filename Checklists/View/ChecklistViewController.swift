@@ -107,7 +107,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         items = dataProvider.getItems()
     }
 
-    func dismissItemDetailScreen() -> UIViewController? {
-        return navigationController?.popViewController(animated: true)
+    func dismissItemDetailScreen() {
+        navigationController?.popViewController(animated: true)
     }
 }
