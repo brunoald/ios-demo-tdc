@@ -19,7 +19,6 @@
 		B2BACE4F206AC614009ECA6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BACE4D206AC614009ECA6B /* Main.storyboard */; };
 		B2BACE51206AC614009ECA6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BACE50206AC614009ECA6B /* Assets.xcassets */; };
 		B2BACE54206AC614009ECA6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BACE52206AC614009ECA6B /* LaunchScreen.storyboard */; };
-		B2BACE5F206AC614009ECA6B /* ChecklistsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BACE5E206AC614009ECA6B /* ChecklistsTests.swift */; };
 		B2BACE6A206AC614009ECA6B /* ChecklistsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BACE69206AC614009ECA6B /* ChecklistsUITests.swift */; };
 		B2BACE78206ACF1A009ECA6B /* ChecklistDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BACE77206ACF1A009ECA6B /* ChecklistDataProvider.swift */; };
 		B2BACE7A206ADCDF009ECA6B /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BACE79206ADCDF009ECA6B /* ChecklistItem.swift */; };
@@ -65,7 +64,6 @@
 		B2BACE53206AC614009ECA6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B2BACE55206AC614009ECA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2BACE5A206AC614009ECA6B /* ChecklistsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChecklistsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2BACE5E206AC614009ECA6B /* ChecklistsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistsTests.swift; sourceTree = "<group>"; };
 		B2BACE60206AC614009ECA6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2BACE65206AC614009ECA6B /* ChecklistsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChecklistsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BACE69206AC614009ECA6B /* ChecklistsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistsUITests.swift; sourceTree = "<group>"; };
@@ -108,10 +106,59 @@
 		60D02EEE217A1C94008DAF6C /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
-				60D02EEF217A1CAD008DAF6C /* ItemDetailViewControllerDelegateMock.swift */,
 				60D02EF1217A1E55008DAF6C /* ChecklistDataProviderDelegateMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		60D02EF5217A6544008DAF6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B2BACE4B206AC614009ECA6B /* ChecklistViewController.swift */,
+				B2BACEBB206C15DF009ECA6B /* ItemDetailViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60D02EF6217A6550008DAF6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2BACE79206ADCDF009ECA6B /* ChecklistItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		60D02EF7217A655C008DAF6C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B2BACE77206ACF1A009ECA6B /* ChecklistDataProvider.swift */,
+				B28B4838206F041D00144754 /* ChecklistDataPersistence.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		60D02EF8217A6598008DAF6C /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				60D02EF3217A5FC8008DAF6C /* ChecklistDataPersistenceSpec.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		60D02EF9217A65A5008DAF6C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				60D02EEF217A1CAD008DAF6C /* ItemDetailViewControllerDelegateMock.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		60D02EFA217A65C9008DAF6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60D02EEC217938BD008DAF6C /* CheckListItemSpec.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		96C78AA3E20E982A292F9064 /* Pods */ = {
@@ -152,16 +199,14 @@
 		B2BACE48206AC614009ECA6B /* Checklists */ = {
 			isa = PBXGroup;
 			children = (
+				60D02EF7217A655C008DAF6C /* Data */,
+				60D02EF6217A6550008DAF6C /* Model */,
+				60D02EF5217A6544008DAF6C /* View */,
 				B2BACE49206AC614009ECA6B /* AppDelegate.swift */,
-				B2BACE4B206AC614009ECA6B /* ChecklistViewController.swift */,
 				B2BACE4D206AC614009ECA6B /* Main.storyboard */,
 				B2BACE50206AC614009ECA6B /* Assets.xcassets */,
 				B2BACE52206AC614009ECA6B /* LaunchScreen.storyboard */,
 				B2BACE55206AC614009ECA6B /* Info.plist */,
-				B2BACE77206ACF1A009ECA6B /* ChecklistDataProvider.swift */,
-				B2BACE79206ADCDF009ECA6B /* ChecklistItem.swift */,
-				B2BACEBB206C15DF009ECA6B /* ItemDetailViewController.swift */,
-				B28B4838206F041D00144754 /* ChecklistDataPersistence.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -169,11 +214,11 @@
 		B2BACE5D206AC614009ECA6B /* ChecklistsTests */ = {
 			isa = PBXGroup;
 			children = (
+				60D02EF8217A6598008DAF6C /* Data */,
+				60D02EFA217A65C9008DAF6C /* Model */,
+				60D02EF9217A65A5008DAF6C /* View */,
 				60D02EEE217A1C94008DAF6C /* Mocks */,
-				B2BACE5E206AC614009ECA6B /* ChecklistsTests.swift */,
 				B2BACE60206AC614009ECA6B /* Info.plist */,
-				60D02EEC217938BD008DAF6C /* CheckListItemSpec.swift */,
-				60D02EF3217A5FC8008DAF6C /* ChecklistDataPersistenceSpec.swift */,
 			);
 			path = ChecklistsTests;
 			sourceTree = "<group>";
@@ -429,7 +474,6 @@
 				60D02EED217938BD008DAF6C /* CheckListItemSpec.swift in Sources */,
 				60D02EF0217A1CAD008DAF6C /* ItemDetailViewControllerDelegateMock.swift in Sources */,
 				60D02EF2217A1E55008DAF6C /* ChecklistDataProviderDelegateMock.swift in Sources */,
-				B2BACE5F206AC614009ECA6B /* ChecklistsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
