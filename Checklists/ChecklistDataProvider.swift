@@ -9,7 +9,14 @@
 
 import Foundation
 
-class ChecklistDataProvider {
+protocol ChecklistDataProviderDelegate {
+    func getItems() -> [ChecklistItem]
+    func addItem(text: String, checked: Bool)
+    func editItem(item: ChecklistItem)
+    func removeItem(index: Int)
+}
+
+class ChecklistDataProvider: ChecklistDataProviderDelegate {
     
     let persistence = ChecklistDataPersistence()
     

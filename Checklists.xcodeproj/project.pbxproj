@@ -11,6 +11,7 @@
 		462B68097086586CD56A95A9 /* Pods_ChecklistsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1956B559C1590FA20EBF6F89 /* Pods_ChecklistsTests.framework */; };
 		60D02EED217938BD008DAF6C /* CheckListItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D02EEC217938BD008DAF6C /* CheckListItemSpec.swift */; };
 		60D02EF0217A1CAD008DAF6C /* ItemDetailViewControllerDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D02EEF217A1CAD008DAF6C /* ItemDetailViewControllerDelegateMock.swift */; };
+		60D02EF2217A1E55008DAF6C /* ChecklistDataProviderDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60D02EF1217A1E55008DAF6C /* ChecklistDataProviderDelegateMock.swift */; };
 		B28B4839206F041D00144754 /* ChecklistDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B28B4838206F041D00144754 /* ChecklistDataPersistence.swift */; };
 		B2BACE4A206AC614009ECA6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BACE49206AC614009ECA6B /* AppDelegate.swift */; };
 		B2BACE4C206AC614009ECA6B /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BACE4B206AC614009ECA6B /* ChecklistViewController.swift */; };
@@ -49,6 +50,7 @@
 		29CDF32C139F88E4EF1A4EDE /* Pods-ChecklistsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsTests/Pods-ChecklistsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		60D02EEC217938BD008DAF6C /* CheckListItemSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListItemSpec.swift; sourceTree = "<group>"; };
 		60D02EEF217A1CAD008DAF6C /* ItemDetailViewControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewControllerDelegateMock.swift; sourceTree = "<group>"; };
+		60D02EF1217A1E55008DAF6C /* ChecklistDataProviderDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistDataProviderDelegateMock.swift; sourceTree = "<group>"; };
 		8272B802144BBEA454579DA8 /* Pods-Checklists.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checklists.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Checklists/Pods-Checklists.debug.xcconfig"; sourceTree = "<group>"; };
 		870A10A63378A757BDAA3FE8 /* Pods-ChecklistsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsTests/Pods-ChecklistsTests.release.xcconfig"; sourceTree = "<group>"; };
 		B21635BD861D5A8C00BE5311 /* Pods-ChecklistsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsUITests/Pods-ChecklistsUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				60D02EEF217A1CAD008DAF6C /* ItemDetailViewControllerDelegateMock.swift */,
+				60D02EF1217A1E55008DAF6C /* ChecklistDataProviderDelegateMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 			files = (
 				60D02EED217938BD008DAF6C /* CheckListItemSpec.swift in Sources */,
 				60D02EF0217A1CAD008DAF6C /* ItemDetailViewControllerDelegateMock.swift in Sources */,
+				60D02EF2217A1E55008DAF6C /* ChecklistDataProviderDelegateMock.swift in Sources */,
 				B2BACE5F206AC614009ECA6B /* ChecklistsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
