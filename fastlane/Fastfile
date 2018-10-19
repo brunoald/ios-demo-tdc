@@ -3,7 +3,15 @@ default_platform(:ios)
 platform :ios do
   desc 'Run unit tests'
   lane :unit_test do
-    scan(scheme: 'ChecklistsUnitTest')
+    scan(
+      scheme: 'ChecklistsUnitTest',
+      code_coverage: true
+    )
+    xcov(
+      scheme: 'ChecklistsUnitTest',
+      minimum_coverage_percentage: 20.00,
+      only_project_targets: true
+    )
   end
 
   desc 'Run UI tests'
