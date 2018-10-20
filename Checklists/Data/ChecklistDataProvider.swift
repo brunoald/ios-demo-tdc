@@ -16,10 +16,12 @@ protocol ChecklistDataProviderDelegate {
 }
 
 class ChecklistDataProvider: ChecklistDataProviderDelegate {
-
-    let persistence = ChecklistDataPersistence()
-
+    var persistence: ChecklistDataPersistenceDelegate
     var data: [ChecklistItem] = []
+    
+    init(persistence: ChecklistDataPersistenceDelegate) {
+        self.persistence = persistence
+    }
 
     func getItems() -> [ChecklistItem] {
         let loadedItems = persistence.loadChecklistItems()
@@ -47,7 +49,7 @@ class ChecklistDataProvider: ChecklistDataProviderDelegate {
         persist()
     }
 
-    func persist() {
+    private func persist() {
         persistence.saveChecklistItems(items: data)
     }
 }
