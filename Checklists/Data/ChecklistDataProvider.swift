@@ -18,7 +18,7 @@ protocol ChecklistDataProviderDelegate {
 class ChecklistDataProvider: ChecklistDataProviderDelegate {
     var persistence: ChecklistDataPersistenceDelegate
     var data: [ChecklistItem] = []
-    
+
     init(persistence: ChecklistDataPersistenceDelegate) {
         self.persistence = persistence
     }
