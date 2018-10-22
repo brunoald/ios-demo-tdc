@@ -10,7 +10,7 @@ import UIKit
 
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
 
-    let dataProvider = ChecklistDataProvider(persistence: ChecklistDataPersistence())
+    let dataProvider = ChecklistDataProvider(persistence: ChecklistDataPersistenceRest())
     var items: [ChecklistItem] = []
 
     override func viewDidLoad() {

@@ -8,6 +8,9 @@ target 'Checklists' do
   # Pods for Checklists
   pod 'RxSwift',    '~> 4.0'
   pod 'RxCocoa',    '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+  pod 'Alamofire-Synchronous', '~> 4.0'
+  pod 'SwiftyJSON', '~> 4.0'
 
   target 'ChecklistsTests' do
     inherit! :search_paths
