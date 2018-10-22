@@ -5,8 +5,9 @@
 //  Created by Larissa Barra Conde on 27/03/18.
 //  Copyright © 2018 CapDev ThoughtWorks. All rights reserved.
 //
-
+import Foundation
 import UIKit
+import RxSwift
 
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
 
@@ -17,6 +18,9 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         super.viewDidLoad()
 
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        refreshControl = UIRefreshControl()
+        refreshControl?.addTarget(self, action: #selector(self.loadItems), for: .valueChanged)
 
         loadItems()
     }
@@ -69,7 +73,9 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
             let item = items[indexPath.row]
             item.toggleChecked()
             configureCheckmark(for: cell, with: item)
-            dataProvider.editItem(item: item).subscribe(onCompleted: {
+            dataProvider.editItem(item: item)
+                .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
+                .subscribe(onCompleted: {
                 self.loadItems()
             })
         }
@@ -78,7 +84,9 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        dataProvider.removeItem(index: indexPath.row).subscribe(onCompleted: {
+        dataProvider.removeItem(index: indexPath.row)
+            .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
+            .subscribe(onCompleted: {
             self.loadItems()
         })
     }
@@ -94,14 +102,21 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         label.text = item.text
     }
 
-    func loadItems() {
-        _ = dataProvider.getItems().subscribe(onNext: {
+    @objc func loadItems() {
+        _ = dataProvider.getItems()
+            .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
+            .subscribe(onNext: {
             self.items = $0
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
+            }
         })
     }
-
+    
     func dismissItemDetailScreen() {
-        navigationController?.popViewController(animated: true)
+        DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
 }

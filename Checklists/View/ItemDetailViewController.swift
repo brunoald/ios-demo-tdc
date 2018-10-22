@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 protocol ItemDetailViewControllerDelegate: class {
     func newItemAdded()
@@ -32,12 +33,16 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         if let itemText = textField.text {
             if let item = itemToEdit {
                 item.text = itemText
-                dataProvider?.editItem(item: item).subscribe (onCompleted: {
+                dataProvider?.editItem(item: item)
+                    .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
+                    .subscribe (onCompleted: {
                     self.delegate?.itemEdited()
                 })
 
             } else {
-                dataProvider?.addItem(text: itemText).subscribe (onCompleted: {
+                dataProvider?.addItem(text: itemText)
+                    .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
+                    .subscribe (onCompleted: {
                     self.delegate?.newItemAdded()
                 })
             }
