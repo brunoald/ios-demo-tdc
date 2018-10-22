@@ -6,13 +6,16 @@ target 'Checklists' do
   use_frameworks!
 
   # Pods for Checklists
-
+  pod 'RxSwift',    '~> 4.0'
+  pod 'RxCocoa',    '~> 4.0'
 
   target 'ChecklistsTests' do
     inherit! :search_paths
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest',     '~> 4.0'
   end
 
   target 'ChecklistsUITests' do
@@ -20,6 +23,8 @@ target 'Checklists' do
     # Pods for testing
     pod 'Quick'
     pod 'Nimble'
+    pod 'RxBlocking', '~> 4.0'
+    pod 'RxTest',     '~> 4.0'
   end
 
 end

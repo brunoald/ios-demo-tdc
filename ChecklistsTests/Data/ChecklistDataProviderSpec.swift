@@ -1,5 +1,6 @@
 import Quick
 import Nimble
+import RxBlocking
 @testable import Checklists
 
 class ChecklistDataProviderSpec: QuickSpec {
@@ -15,7 +16,7 @@ class ChecklistDataProviderSpec: QuickSpec {
 
             context("when adding item") {
                 beforeEach {
-                    dataProvider.addItem(text: "Item A")
+                    try! dataProvider.addItem(text: "Item A").toBlocking().first()
                 }
 
                 it("tells data persistence delegate to save item") {
@@ -33,10 +34,10 @@ class ChecklistDataProviderSpec: QuickSpec {
 
                 beforeEach {
                     dataPersistenceMock.itemsToReturn = [item]
-                    _ = dataProvider.getItems()
+                    try! dataProvider.getItems().toBlocking().first()
 
                     item.checked = true
-                    dataProvider.editItem(item: item)
+                    try! dataProvider.editItem(item: item).toBlocking().first()
                 }
 
                 it("tells data persistence delegate to save edited item") {
@@ -55,8 +56,8 @@ class ChecklistDataProviderSpec: QuickSpec {
 
                 beforeEach {
                     dataPersistenceMock.itemsToReturn = [item]
-                    _ = dataProvider.getItems()
-                    dataProvider.removeItem(index: 0)
+                    try! dataProvider.getItems().toBlocking().first()
+                    try! dataProvider.removeItem(index: 0).toBlocking().first()
                 }
 
                 it("tells data persistence delegate to save edited item") {

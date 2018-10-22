@@ -7,12 +7,13 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol ChecklistDataProviderDelegate {
-    func getItems() -> [ChecklistItem]
-    func addItem(text: String, checked: Bool)
-    func editItem(item: ChecklistItem)
-    func removeItem(index: Int)
+    func getItems() -> Observable<[ChecklistItem]>
+    func addItem(text: String, checked: Bool) -> Observable<Void>
+    func editItem(item: ChecklistItem) -> Observable<Void>
+    func removeItem(index: Int) -> Observable<Void>
 }
 
 class ChecklistDataProvider: ChecklistDataProviderDelegate {
@@ -23,30 +24,48 @@ class ChecklistDataProvider: ChecklistDataProviderDelegate {
         self.persistence = persistence
     }
 
-    func getItems() -> [ChecklistItem] {
-        let loadedItems = persistence.loadChecklistItems()
-        if !loadedItems.isEmpty {
-            data = loadedItems
-        }
-        return data
-    }
-
-    func addItem(text: String, checked: Bool = false) {
-        let newItem = ChecklistItem(text: text, checked: checked)
-        data.append(newItem)
-        persist()
-    }
-
-    func editItem(item: ChecklistItem) {
-        if let index = data.index(of: item) {
-            data[index] = item
-            persist()
+    func getItems() -> Observable<[ChecklistItem]> {
+        return Observable<[ChecklistItem]>.create { (observer) -> Disposable in
+            let loadedItems = self.persistence.loadChecklistItems()
+            if !loadedItems.isEmpty {
+                self.data = loadedItems
+            }
+            observer.onNext(self.data)
+            observer.onCompleted()
+            return Disposables.create()
         }
     }
 
-    func removeItem(index: Int) {
-        data.remove(at: index)
-        persist()
+    func addItem(text: String, checked: Bool = false) -> Observable<Void> {
+        return Observable<Void>.create { (observer) -> Disposable in
+            let newItem = ChecklistItem(text: text, checked: checked)
+            self.data.append(newItem)
+            self.persist()
+            observer.onCompleted()
+            return Disposables.create()
+        }
+    }
+
+    func editItem(item: ChecklistItem) -> Observable<Void> {
+        return Observable<Void>.create { (observer) -> Disposable in
+            if let index = self.data.index(of: item) {
+                self.data[index] = item
+                self.persist()
+                observer.onCompleted()
+            } else {
+                observer.onError(NSError())
+            }
+            return Disposables.create()
+        }
+    }
+
+    func removeItem(index: Int) -> Observable<Void> {
+        return Observable<Void>.create { (observer) -> Disposable in
+            self.data.remove(at: index)
+            self.persist()
+            observer.onCompleted()
+            return Disposables.create()
+        }
     }
 
     private func persist() {

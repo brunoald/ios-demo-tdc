@@ -1,4 +1,5 @@
 @testable import Checklists
+import RxSwift
 
 class ChecklistDataProviderDelegateMock: ChecklistDataProviderDelegate {
     var didCallGetItems =  false
@@ -11,23 +12,26 @@ class ChecklistDataProviderDelegateMock: ChecklistDataProviderDelegate {
     var lastEditedItem: ChecklistItem?
     var lastRemovedItem: Int?
 
-    func getItems() -> [ChecklistItem] {
+    func getItems() -> Observable<[ChecklistItem]> {
         didCallGetItems = true
-        return itemsToReturn!
+        return Observable.just(itemsToReturn!)
     }
 
-    func addItem(text: String, checked: Bool) {
+    func addItem(text: String, checked: Bool) -> Observable<Void> {
         didCallAddItem = true
         lastAddedItem = ChecklistItem(text: text, checked: checked)
+        return Observable.empty()
     }
 
-    func editItem(item: ChecklistItem) {
+    func editItem(item: ChecklistItem) -> Observable<Void> {
         didCallEditItem = true
         lastEditedItem = item
+        return Observable.empty()
     }
 
-    func removeItem(index: Int) {
+    func removeItem(index: Int) -> Observable<Void> {
         didCallRemoveItem = true
         lastRemovedItem = index
+        return Observable.empty()
     }
 }

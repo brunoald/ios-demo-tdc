@@ -36,18 +36,11 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     /* ItemDetail delegate */
     func newItemAdded() {
         loadItems()
-
-        let indexPath = IndexPath(row: items.count-1, section: 0)
-        let indexPaths = [indexPath]
-        tableView.insertRows(at: indexPaths, with: .automatic)
-
         dismissItemDetailScreen()
     }
 
     func itemEdited() {
         loadItems()
-        tableView.reloadData()
-
         dismissItemDetailScreen()
     }
 
@@ -75,26 +68,24 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         if let cell = tableView.cellForRow(at: indexPath) {
             let item = items[indexPath.row]
             item.toggleChecked()
-            dataProvider.editItem(item: item)
-
             configureCheckmark(for: cell, with: item)
+            dataProvider.editItem(item: item).subscribe(onCompleted: {
+                self.loadItems()
+            })
         }
 
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        dataProvider.removeItem(index: indexPath.row)
-        loadItems()
-
-        let indexPaths = [indexPath]
-        tableView.deleteRows(at: indexPaths, with: .automatic)
+        dataProvider.removeItem(index: indexPath.row).subscribe(onCompleted: {
+            self.loadItems()
+        })
     }
 
     /* class methods */
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
         let label = cell.viewWithTag(1001) as! UILabel
-
         label.text = item.checked ? "√" : ""
     }
 
@@ -104,7 +95,10 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
 
     func loadItems() {
-        items = dataProvider.getItems()
+        _ = dataProvider.getItems().subscribe(onNext: {
+            self.items = $0
+            self.tableView.reloadData()
+        })
     }
 
     func dismissItemDetailScreen() {
