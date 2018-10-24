@@ -22,7 +22,6 @@ DerivedData/
 *.perspectivev3
 !default.perspectivev3
 xcuserdata/
-xcshareddata/
 WorkspaceSettings.xcsettings
 
 # CocoaPods
@@ -39,3 +38,4 @@ fastlane/report.xml
 fastlane/test_output/
 fastlane/README.md
 fastlane/xcov_report/
+fastlane/swift/
