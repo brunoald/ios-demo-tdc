@@ -1,7 +1,7 @@
 @testable import Checklists
 import RxSwift
 
-class ChecklistDataProviderDelegateMock: ChecklistDataProviderDelegate {
+class ChecklistDataProviderDelegateMock: ChecklistDataProviderType {
     var didCallGetItems =  false
     var didCallAddItem = false
     var didCallEditItem = false

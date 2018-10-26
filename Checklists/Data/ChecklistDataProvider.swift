@@ -9,14 +9,14 @@
 import Foundation
 import RxSwift
 
-protocol ChecklistDataProviderDelegate {
+protocol ChecklistDataProviderType: class {
     func getItems() -> Observable<[ChecklistItem]>
     func addItem(text: String, checked: Bool) -> Observable<Void>
     func editItem(item: ChecklistItem) -> Observable<Void>
     func removeItem(index: Int) -> Observable<Void>
 }
 
-class ChecklistDataProvider: ChecklistDataProviderDelegate {
+class ChecklistDataProvider: ChecklistDataProviderType {
     var persistence: ChecklistDataPersistenceDelegate
     var data: [ChecklistItem] = []
 
