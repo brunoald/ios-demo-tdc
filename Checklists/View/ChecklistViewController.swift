@@ -18,7 +18,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         super.viewDidLoad()
 
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+
         refreshControl = UIRefreshControl()
         refreshControl?.addTarget(self, action: #selector(self.loadItems), for: .valueChanged)
 
@@ -76,8 +76,8 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
             dataProvider.editItem(item: item)
                 .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
                 .subscribe(onCompleted: {
-                self.loadItems()
-            })
+                    self.loadItems()
+                })
         }
 
         tableView.deselectRow(at: indexPath, animated: true)
@@ -87,8 +87,8 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         dataProvider.removeItem(index: indexPath.row)
             .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
             .subscribe(onCompleted: {
-            self.loadItems()
-        })
+                self.loadItems()
+            })
     }
 
     /* class methods */
@@ -106,14 +106,14 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         _ = dataProvider.getItems()
             .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
             .subscribe(onNext: {
-            self.items = $0
-            DispatchQueue.main.async {
-                self.tableView.reloadData()
-                self.refreshControl?.endRefreshing()
-            }
-        })
+                self.items = $0
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                    self.refreshControl?.endRefreshing()
+                }
+            })
     }
-    
+
     func dismissItemDetailScreen() {
         DispatchQueue.main.async {
             self.navigationController?.popViewController(animated: true)

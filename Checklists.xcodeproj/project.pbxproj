@@ -20,7 +20,7 @@
 		64FDD0BC33E8C47883322E148F78D948 /* ChecklistDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537AEBED620C53C4D14BA813979DED43 /* ChecklistDataPersistence.swift */; };
 		6A92947D92569A4E100BE1106BAB2349 /* Pods_ChecklistsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2C8894CFC1A8D2F6D8EB838F2C5C774 /* Pods_ChecklistsUITests.framework */; };
 		94443FE79AC7C9656E73A47630827697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2FA77C497A9ECA00DEBA96A31941C9 /* Main.storyboard */; };
-		96E544F4FE854952B3686E65BF9E3E45 /* ChecklistDataProviderDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0F24D44B14B39C516A46FE7DCACB07 /* ChecklistDataProviderDelegateMock.swift */; };
+		96E544F4FE854952B3686E65BF9E3E45 /* ChecklistDataProviderTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA0F24D44B14B39C516A46FE7DCACB07 /* ChecklistDataProviderTypeMock.swift */; };
 		9FB3E246BC7D116732DC12DEF9470DCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5173F3E7466A2F8361B84BA8E810DEE8 /* Assets.xcassets */; };
 		A3A32C522E0414134E0CD0AF053309CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DE7A15AF494470EB04BF9EA7122D7C /* AppDelegate.swift */; };
 		A8540EDC0A393735B2E67955BEB489AE /* ChecklistDataPersistenceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12CF8FD696B037936487214B0F42EFB7 /* ChecklistDataPersistenceSpec.swift */; };
@@ -75,7 +75,7 @@
 		9C53B8A34CE47B39F6AEFD3C555CD48B /* Pods_Checklists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checklists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D38C72462C0DE9999D76A86F97A56C /* Pods-ChecklistsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsUITests/Pods-ChecklistsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B2C8894CFC1A8D2F6D8EB838F2C5C774 /* Pods_ChecklistsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChecklistsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA0F24D44B14B39C516A46FE7DCACB07 /* ChecklistDataProviderDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistDataProviderDelegateMock.swift; sourceTree = "<group>"; };
+		CA0F24D44B14B39C516A46FE7DCACB07 /* ChecklistDataProviderTypeMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistDataProviderTypeMock.swift; sourceTree = "<group>"; };
 		D7DE7A15AF494470EB04BF9EA7122D7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1D3424EEE6448F3C289C33B90B3BD85 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		E744F0612C12127FA4261D7D13A69DDC /* ChecklistDataPersistenceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistDataPersistenceMock.swift; sourceTree = "<group>"; };
@@ -251,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				E744F0612C12127FA4261D7D13A69DDC /* ChecklistDataPersistenceMock.swift */,
-				CA0F24D44B14B39C516A46FE7DCACB07 /* ChecklistDataProviderDelegateMock.swift */,
+				CA0F24D44B14B39C516A46FE7DCACB07 /* ChecklistDataProviderTypeMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -542,7 +542,7 @@
 				0A279B00CCF870AB51672B83643394BE /* CheckListItemSpec.swift in Sources */,
 				E2E8920AAE5DADC5EE021A1CE0F80A98 /* ChecklistDataPersistenceMock.swift in Sources */,
 				A8540EDC0A393735B2E67955BEB489AE /* ChecklistDataPersistenceSpec.swift in Sources */,
-				96E544F4FE854952B3686E65BF9E3E45 /* ChecklistDataProviderDelegateMock.swift in Sources */,
+				96E544F4FE854952B3686E65BF9E3E45 /* ChecklistDataProviderTypeMock.swift in Sources */,
 				BF87BCE99E8CDB979E047896893EAD24 /* ChecklistDataProviderSpec.swift in Sources */,
 				439E9CB8818C98B236B33635A8588483 /* ItemDetailViewControllerDelegateMock.swift in Sources */,
 				4E1BB57E2182A69800A01759 /* ChecklistViewControllerSpec.swift in Sources */,

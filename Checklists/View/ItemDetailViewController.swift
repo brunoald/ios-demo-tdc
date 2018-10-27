@@ -36,15 +36,15 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
                 dataProvider?.editItem(item: item)
                     .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
                     .subscribe (onCompleted: {
-                    self.delegate?.itemEdited()
-                })
+                        self.delegate?.itemEdited()
+                    })
 
             } else {
-                dataProvider?.addItem(text: itemText)
+                dataProvider?.addItem(text: itemText, checked: false)
                     .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
                     .subscribe (onCompleted: {
-                    self.delegate?.newItemAdded()
-                })
+                        self.delegate?.newItemAdded()
+                    })
             }
         }
     }

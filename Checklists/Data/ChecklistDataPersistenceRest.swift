@@ -12,7 +12,7 @@ class ChecklistDataPersistenceRest: ChecklistDataPersistenceDelegate {
         ]
         _ = Alamofire.request("\(baseUrl)/items.json", method: .post, parameters: parameters).responseData()
     }
-    
+
     func loadChecklistItems() -> [ChecklistItem] {
         let response = Alamofire.request("\(baseUrl)/items.json").responseJSON()
         let json = JSON(response.result.value)
@@ -20,7 +20,7 @@ class ChecklistDataPersistenceRest: ChecklistDataPersistenceDelegate {
             ChecklistItem(text: $0["text"].stringValue, checked: $0["checked"].boolValue)
         })
     }
-    
+
     func eraseAll() {
     }
 }
