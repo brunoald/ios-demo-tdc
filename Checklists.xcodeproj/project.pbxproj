@@ -221,7 +221,6 @@
 		998FA02568DB194A421EBFDC344E1E78 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				F57AD8F59BF2970DC55C3CA02E9823AC /* ItemDetailViewControllerDelegateMock.swift */,
 				4E1BB57D2182A69800A01759 /* ChecklistViewControllerSpec.swift */,
 			);
 			path = View;
@@ -251,6 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				E744F0612C12127FA4261D7D13A69DDC /* ChecklistDataPersistenceMock.swift */,
+				F57AD8F59BF2970DC55C3CA02E9823AC /* ItemDetailViewControllerDelegateMock.swift */,
 				CA0F24D44B14B39C516A46FE7DCACB07 /* ChecklistDataProviderTypeMock.swift */,
 			);
 			path = Mocks;
