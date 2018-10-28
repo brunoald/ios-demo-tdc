@@ -21,7 +21,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     @IBOutlet weak var textField: UITextField!
 
     var delegate: ItemDetailViewControllerDelegate?
-    weak var dataProvider: ChecklistDataProvider?
+    weak var dataProvider: ChecklistDataProviderType?
 
     var itemToEdit: ChecklistItem?
 
@@ -40,7 +40,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
                     })
 
             } else {
-                dataProvider?.addItem(text: itemText)
+                dataProvider?.addItem(text: itemText, checked: false)
                     .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
                     .subscribe (onCompleted: {
                         self.delegate?.newItemAdded()

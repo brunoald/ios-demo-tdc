@@ -11,7 +11,7 @@ import RxSwift
 
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
 
-    let dataProvider = ChecklistDataProvider(persistence: ChecklistDataPersistenceRest())
+    var dataProvider: ChecklistDataProviderType!
     var items: [ChecklistItem] = []
 
     override func viewDidLoad() {

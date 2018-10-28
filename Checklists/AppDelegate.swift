@@ -12,9 +12,13 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let dataProvider = ChecklistDataProvider(persistence: ChecklistDataPersistenceRest())
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let navigationController = window!.rootViewController as! UINavigationController
+        let checklistViewController = navigationController.viewControllers[0] as! ChecklistViewController
+        checklistViewController.dataProvider = dataProvider
+
         return true
     }
 
