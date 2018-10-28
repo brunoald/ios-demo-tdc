@@ -49,16 +49,16 @@ class ChecklistDataPersistenceSpec: QuickSpec {
                     expect(result[1].checked).to(equal(itemB.checked))
                 }
             }
-            
+
             context("when erasing items") {
                 var result: [ChecklistItem]!
-                
+
                 beforeEach {
                     dataPersistence.saveChecklistItems(items: [itemA, itemB])
                     dataPersistence.eraseAll()
                     result = dataPersistence.loadChecklistItems()
                 }
-                
+
                 it("returns an empty list") {
                     expect(result).to(beEmpty())
                 }

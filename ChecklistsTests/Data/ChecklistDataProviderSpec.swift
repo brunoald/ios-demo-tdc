@@ -13,12 +13,12 @@ class ChecklistDataProviderSpec: QuickSpec {
                 dataPersistenceMock = ChecklistDataPersistenceMock()
                 dataProvider = ChecklistDataProvider(persistence: dataPersistenceMock)
             }
-            
+
             context("when retrieving items") {
                 beforeEach {
                     _ = try! dataProvider.getItems().toBlocking().first()
                 }
-                
+
                 it("calls data persistance asking for items") {
                     expect(dataPersistenceMock.didCallLoadChecklistItems).to(beTrue())
                 }
