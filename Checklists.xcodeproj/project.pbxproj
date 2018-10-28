@@ -98,7 +98,6 @@
 		9A52C7AF563D703D159F31744C046060 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C53B8A34CE47B39F6AEFD3C555CD48B /* Pods_Checklists.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Checklists.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5D38C72462C0DE9999D76A86F97A56C /* Pods-ChecklistsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsUITests/Pods-ChecklistsUITests.release.xcconfig"; sourceTree = "<group>"; };
-		A9C46CC059C9DF7E0D3F0170963E9339 /* ChecklistsUITestLocal copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ChecklistsUITestLocal copy-Info.plist"; path = "/Users/bdias/Code/ios-demo-tdc/ChecklistsUITestLocal copy-Info.plist"; sourceTree = "<absolute>"; };
 		AB6282C562A8F9FC182133DAD7747EC9 /* ChecklistsUITestIntegration.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChecklistsUITestIntegration.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2C8894CFC1A8D2F6D8EB838F2C5C774 /* Pods_ChecklistsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChecklistsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4147E8741644B3A4A70EDE46FD28235 /* Pods-ChecklistsUITestLocal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChecklistsUITestLocal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChecklistsUITestLocal/Pods-ChecklistsUITestLocal.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,21 +134,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		86C9F87F8B16424C2F246159FDF13BCF /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A47C86DDA7EAE5128007A7118383ECE1 /* Pods_ChecklistsUITestIntegration.framework in Frameworks */,
-				A0754B2B125BA74EE9BF4E6D4B436E66 /* Pods_ChecklistsUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		536C7826A035E1632AB2017CE1432DB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5F9854625D434B12CE5D63E6799652D9 /* Pods_ChecklistsUITestLocal.framework in Frameworks */,
 				DF8BD98F67AD36404060CC776C4A3D29 /* Pods_ChecklistsUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86C9F87F8B16424C2F246159FDF13BCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A47C86DDA7EAE5128007A7118383ECE1 /* Pods_ChecklistsUITestIntegration.framework in Frameworks */,
+				A0754B2B125BA74EE9BF4E6D4B436E66 /* Pods_ChecklistsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +172,14 @@
 				27A0479C0F8DA0A5396BF77E15CB471B /* ItemDetailViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		0E48AE4D641ACD654D34C93B8E331927 /* Integration */ = {
+			isa = PBXGroup;
+			children = (
+				DC8EB281BC2CDC61D6DFCF4CA7307C18 /* IntegrationUITests.swift */,
+			);
+			path = Integration;
 			sourceTree = "<group>";
 		};
 		291A62E5F3BCB4E6337B9C6BAF5C5645 /* Checklists */ = {
@@ -245,7 +252,6 @@
 				27CA188C8410467C4A548DD5C77CFF99 /* Makefile */,
 				4C4188C311DF31A39F24D60685057040 /* Pods */,
 				C6DCF49DC5CBEF67DD72ADFC82F87856 /* Products */,
-				A9C46CC059C9DF7E0D3F0170963E9339 /* ChecklistsUITestLocal copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -256,23 +262,6 @@
 				75C09C958236F4FC8DBB4D3610722792 /* ChecklistDataProviderSpec.swift */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		DA20F891D7C004693E4411ED27A195AA /* Local */ = {
-			isa = PBXGroup;
-			children = (
-				D432984443441593085E9F822A4BAED6 /* APIMock.swift */,
-				90B7C8616A0FAD6984542CDC31BD3075 /* LocalUITests.swift */,
-			);
-			path = Local;
-			sourceTree = "<group>";
-		};
-		0E48AE4D641ACD654D34C93B8E331927 /* Integration */ = {
-			isa = PBXGroup;
-			children = (
-				DC8EB281BC2CDC61D6DFCF4CA7307C18 /* IntegrationUITests.swift */,
-			);
-			path = Integration;
 			sourceTree = "<group>";
 		};
 		7E689135E3AD71A43AD958122EACE6BA /* ChecklistsTests */ = {
@@ -339,6 +328,15 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
+		DA20F891D7C004693E4411ED27A195AA /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				D432984443441593085E9F822A4BAED6 /* APIMock.swift */,
+				90B7C8616A0FAD6984542CDC31BD3075 /* LocalUITests.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -382,6 +380,25 @@
 			productReference = AB6282C562A8F9FC182133DAD7747EC9 /* ChecklistsUITestIntegration.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		ADF66C4C9F00975F16EBC494FECC3DE7 /* Checklists */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C1BE9454D544B1F7A7444AADB49BDDC /* Build configuration list for PBXNativeTarget "Checklists" */;
+			buildPhases = (
+				2E15DB319AD5F537B48299D67A934A1D /* [CP] Check Pods Manifest.lock */,
+				EBA468E16DF747E875846A34E025C097 /* Sources */,
+				50E3DF9E074CC079999B4C4E2B507D9C /* Frameworks */,
+				EDF9553A33F0935D48AD4CC16D3C882D /* Resources */,
+				9738B15DBA9CC06C586E74DE9867D7E3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Checklists;
+			productName = Checklists;
+			productReference = 121EAC2F9A050F0019FE5158CA1B3C53 /* Checklists.app */;
+			productType = "com.apple.product-type.application";
+		};
 		CC11F681EECA7F87E6048445B29745D5 /* ChecklistsUITestLocal */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 67D11D11E8DC7E5FC85AB80422A9DC22 /* Build configuration list for PBXNativeTarget "ChecklistsUITestLocal" */;
@@ -402,25 +419,6 @@
 			productReference = 602235184783867B312B5713B7BA80E7 /* ChecklistsUITestLocal.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		ADF66C4C9F00975F16EBC494FECC3DE7 /* Checklists */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1C1BE9454D544B1F7A7444AADB49BDDC /* Build configuration list for PBXNativeTarget "Checklists" */;
-			buildPhases = (
-				2E15DB319AD5F537B48299D67A934A1D /* [CP] Check Pods Manifest.lock */,
-				EBA468E16DF747E875846A34E025C097 /* Sources */,
-				50E3DF9E074CC079999B4C4E2B507D9C /* Frameworks */,
-				EDF9553A33F0935D48AD4CC16D3C882D /* Resources */,
-				9738B15DBA9CC06C586E74DE9867D7E3 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Checklists;
-			productName = Checklists;
-			productReference = 121EAC2F9A050F0019FE5158CA1B3C53 /* Checklists.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -440,14 +438,14 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = ADF66C4C9F00975F16EBC494FECC3DE7;
 					};
+					ADF66C4C9F00975F16EBC494FECC3DE7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 					CC11F681EECA7F87E6048445B29745D5 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = ADF66C4C9F00975F16EBC494FECC3DE7;
-					};
-					ADF66C4C9F00975F16EBC494FECC3DE7 = {
-						CreatedOnToolsVersion = 9.2;
-						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -473,14 +471,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		32401BEDF520F20B916E999F50D79668 /* Resources */ = {
+		24B0092915BE13AD14CA8808C1CCE021 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		24B0092915BE13AD14CA8808C1CCE021 /* Resources */ = {
+		32401BEDF520F20B916E999F50D79668 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -507,70 +505,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E15DB319AD5F537B48299D67A934A1D /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Checklists-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D4B7DF39EEED5326D1323001799E5736 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ChecklistsUITestLocal/Pods-ChecklistsUITestLocal-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
-				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
-				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChecklistsUITestLocal/Pods-ChecklistsUITestLocal-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2FEA619ADA11B72F68D43A08AB73818C /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ChecklistsUITestIntegration-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		1DB33C5A082BAE41A47C253B56476DE4 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -597,6 +531,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChecklistsUITestIntegration/Pods-ChecklistsUITestIntegration-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2E15DB319AD5F537B48299D67A934A1D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Checklists-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2FEA619ADA11B72F68D43A08AB73818C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChecklistsUITestIntegration-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BEEBC22533278509DFF10F8489EA7F7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChecklistsUITestLocal-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7ECE055A92E5CB83FA4525D88AE8E5BD /* [CP] Check Pods Manifest.lock */ = {
@@ -643,22 +631,32 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Checklists/Pods-Checklists-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3BEEBC22533278509DFF10F8489EA7F7 /* [CP] Check Pods Manifest.lock */ = {
+		D4B7DF39EEED5326D1323001799E5736 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-ChecklistsUITestLocal/Pods-ChecklistsUITestLocal-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ChecklistsUITestLocal-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChecklistsUITestLocal/Pods-ChecklistsUITestLocal-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E68241A941BCB0F9A87E9A41F83225B7 /* [CP] Embed Pods Frameworks */ = {
@@ -692,6 +690,22 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AA65AA382989445DAD4A285D021E0531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A279B00CCF870AB51672B83643394BE /* CheckListItemSpec.swift in Sources */,
+				E2E8920AAE5DADC5EE021A1CE0F80A98 /* ChecklistDataPersistenceMock.swift in Sources */,
+				A8540EDC0A393735B2E67955BEB489AE /* ChecklistDataPersistenceSpec.swift in Sources */,
+				BF87BCE99E8CDB979E047896893EAD24 /* ChecklistDataProviderSpec.swift in Sources */,
+				67D5E266E357C9464E089B4D7537F9AE /* ChecklistDataProviderTypeMock.swift in Sources */,
+				E5C4E0D6870B44C9D8150812272CE7B2 /* ChecklistViewControllerSpec.swift in Sources */,
+				DACD0F77D4E19524EE2C281ACFC40C76 /* EnvironmentSpec.swift in Sources */,
+				1A46D5B1309E43ECFC42EBF21BD1782C /* ItemDetailViewControllerDelegateMock.swift in Sources */,
+				F9897E0918EF262D0169DC708D3C4DAF /* ItemDetailViewControllerSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C80D8F3BDCC9DC3CC71B23BF917CE50A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -713,22 +727,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AA65AA382989445DAD4A285D021E0531 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0A279B00CCF870AB51672B83643394BE /* CheckListItemSpec.swift in Sources */,
-				E2E8920AAE5DADC5EE021A1CE0F80A98 /* ChecklistDataPersistenceMock.swift in Sources */,
-				A8540EDC0A393735B2E67955BEB489AE /* ChecklistDataPersistenceSpec.swift in Sources */,
-				BF87BCE99E8CDB979E047896893EAD24 /* ChecklistDataProviderSpec.swift in Sources */,
-				67D5E266E357C9464E089B4D7537F9AE /* ChecklistDataProviderTypeMock.swift in Sources */,
-				E5C4E0D6870B44C9D8150812272CE7B2 /* ChecklistViewControllerSpec.swift in Sources */,
-				DACD0F77D4E19524EE2C281ACFC40C76 /* EnvironmentSpec.swift in Sources */,
-				1A46D5B1309E43ECFC42EBF21BD1782C /* ItemDetailViewControllerDelegateMock.swift in Sources */,
-				F9897E0918EF262D0169DC708D3C4DAF /* ItemDetailViewControllerSpec.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EBA468E16DF747E875846A34E025C097 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -747,6 +745,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		258E6B8B7358C696FF61C9D44B48503B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ADF66C4C9F00975F16EBC494FECC3DE7 /* Checklists */;
+			targetProxy = C96B84C3FC5C270B4C318BF2EF4585CE /* PBXContainerItemProxy */;
+		};
 		ACCE7815224524D6261B40E17613D6AE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ADF66C4C9F00975F16EBC494FECC3DE7 /* Checklists */;
@@ -756,11 +759,6 @@
 			isa = PBXTargetDependency;
 			target = ADF66C4C9F00975F16EBC494FECC3DE7 /* Checklists */;
 			targetProxy = BA6B9672EFA8600EDBA791CFB11B4C8B /* PBXContainerItemProxy */;
-		};
-		258E6B8B7358C696FF61C9D44B48503B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = ADF66C4C9F00975F16EBC494FECC3DE7 /* Checklists */;
-			targetProxy = C96B84C3FC5C270B4C318BF2EF4585CE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -834,6 +832,40 @@
 			};
 			name = Release;
 		};
+		3AE2C65A984D798A835B508D48251461 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E472187A6B96426EFCC0DB9EAE512D0A /* Pods-ChecklistsUITestIntegration.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ8P948NCH;
+				INFOPLIST_FILE = "ChecklistsUITestLocal copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.capdev.lbarra.ChecklistsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Checklists;
+			};
+			name = Release;
+		};
+		3D096B775128878E423AC52F16368DEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B4147E8741644B3A4A70EDE46FD28235 /* Pods-ChecklistsUITestLocal.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ8P948NCH;
+				INFOPLIST_FILE = ChecklistsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.capdev.lbarra.ChecklistsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Checklists;
+			};
+			name = Debug;
+		};
 		4C69A04D424435AAC288C78C9D81965D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4B3D6A434AA108C8F5AFD1BD4A037FE8 /* Pods-ChecklistsUITestLocal.release.xcconfig */;
@@ -867,40 +899,6 @@
 			};
 			name = Debug;
 		};
-		B8AE99471B11DF819262846071D4AB15 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C3E3983852DF1DA56343F062A20B6CB0 /* Pods-ChecklistsUITestIntegration.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZ8P948NCH;
-				INFOPLIST_FILE = "ChecklistsUITestLocal copy-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.capdev.lbarra.ChecklistsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Checklists;
-			};
-			name = Debug;
-		};
-		3AE2C65A984D798A835B508D48251461 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E472187A6B96426EFCC0DB9EAE512D0A /* Pods-ChecklistsUITestIntegration.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZ8P948NCH;
-				INFOPLIST_FILE = "ChecklistsUITestLocal copy-Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.capdev.lbarra.ChecklistsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Checklists;
-			};
-			name = Release;
-		};
 		83D72132EC7B2E9FE03020A153775FA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2A57C9E793F3E868E211D553EDD76B6B /* Pods-ChecklistsTests.debug.xcconfig */;
@@ -916,23 +914,6 @@
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Checklists.app/Checklists";
-			};
-			name = Debug;
-		};
-		3D096B775128878E423AC52F16368DEC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4147E8741644B3A4A70EDE46FD28235 /* Pods-ChecklistsUITestLocal.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CZ8P948NCH;
-				INFOPLIST_FILE = ChecklistsUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.capdev.lbarra.ChecklistsUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Checklists;
 			};
 			name = Debug;
 		};
@@ -990,6 +971,23 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8AE99471B11DF819262846071D4AB15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3E3983852DF1DA56343F062A20B6CB0 /* Pods-ChecklistsUITestIntegration.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ8P948NCH;
+				INFOPLIST_FILE = "ChecklistsUITestLocal copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.capdev.lbarra.ChecklistsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Checklists;
 			};
 			name = Debug;
 		};
@@ -1057,20 +1055,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E8C58338870A439607862100D9A7978E /* Build configuration list for PBXNativeTarget "ChecklistsUITestIntegration" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B8AE99471B11DF819262846071D4AB15 /* Debug */,
-				3AE2C65A984D798A835B508D48251461 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		D9682820D5D83E1329EA6EE1BEC6E4B9 /* Build configuration list for PBXProject "Checklists" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B51F1FFED82F21EE158367712D53C693 /* Debug */,
 				3739928C3A7567070346BF2C0E4AD834 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8C58338870A439607862100D9A7978E /* Build configuration list for PBXNativeTarget "ChecklistsUITestIntegration" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8AE99471B11DF819262846071D4AB15 /* Debug */,
+				3AE2C65A984D798A835B508D48251461 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
