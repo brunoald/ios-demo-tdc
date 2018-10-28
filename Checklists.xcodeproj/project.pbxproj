@@ -25,6 +25,7 @@
 		64FDD0BC33E8C47883322E148F78D948 /* ChecklistDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537AEBED620C53C4D14BA813979DED43 /* ChecklistDataPersistence.swift */; };
 		67D5E266E357C9464E089B4D7537F9AE /* ChecklistDataProviderTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471783747A1D1B569C347FDD6FDC3B82 /* ChecklistDataProviderTypeMock.swift */; };
 		72605A5F1A1B0AA534C819BA2C15BECC /* ChecklistRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF895E03E33D9008392111F553D43C9 /* ChecklistRobot.swift */; };
+		7A6F1388C27E07A8D2391BC752B9ECFD /* MonkeyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F72424B5F480C99550F44AEFB52F6348 /* MonkeyTest.swift */; };
 		8A600BA4F92829D933D25F4DA87B4E54 /* ChecklistDataPersistenceRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED906414EC0452AF5624959708846A8 /* ChecklistDataPersistenceRest.swift */; };
 		94443FE79AC7C9656E73A47630827697 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F2FA77C497A9ECA00DEBA96A31941C9 /* Main.storyboard */; };
 		9FB3E246BC7D116732DC12DEF9470DCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5173F3E7466A2F8361B84BA8E810DEE8 /* Assets.xcassets */; };
@@ -114,6 +115,7 @@
 		E8DC6B57DA2C93BACC1BC9446BD6914D /* ItemDetailViewControllerDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewControllerDelegateMock.swift; sourceTree = "<group>"; };
 		F2DE29E4D724BFCA09B9FAFD15633E12 /* Pods_ChecklistsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChecklistsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F39AF4559ED6BC307F2CF15601818249 /* Pods-Checklists.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Checklists.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Checklists/Pods-Checklists.debug.xcconfig"; sourceTree = "<group>"; };
+		F72424B5F480C99550F44AEFB52F6348 /* MonkeyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonkeyTest.swift; sourceTree = "<group>"; };
 		FAF895E03E33D9008392111F553D43C9 /* ChecklistRobot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistRobot.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -333,6 +335,7 @@
 			children = (
 				D432984443441593085E9F822A4BAED6 /* APIMock.swift */,
 				90B7C8616A0FAD6984542CDC31BD3075 /* LocalUITests.swift */,
+				F72424B5F480C99550F44AEFB52F6348 /* MonkeyTest.swift */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMonkey/SwiftMonkey.framework",
 				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -526,6 +530,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMonkey.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -643,6 +648,7 @@
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMonkey/SwiftMonkey.framework",
 				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -652,6 +658,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMonkey.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -671,6 +678,7 @@
 				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftMonkey/SwiftMonkey.framework",
 				"${BUILT_PRODUCTS_DIR}/Swifter/Swifter.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -680,6 +688,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftMonkey.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swifter.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,6 +733,7 @@
 				0E4734AA03D8C1DB36E796C2ED217A19 /* BaseRobot.swift in Sources */,
 				5AC8CB6F79AB5A14D1F4CCFBDB1E942E /* ChecklistRobot.swift in Sources */,
 				45BFD8DFD1503E2F0237C55974856CF5 /* LocalUITests.swift in Sources */,
+				7A6F1388C27E07A8D2391BC752B9ECFD /* MonkeyTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

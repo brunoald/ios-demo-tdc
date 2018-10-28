@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = window!.rootViewController as! UINavigationController
         let checklistViewController = navigationController.viewControllers[0] as! ChecklistViewController
         checklistViewController.dataProvider = dataProvider
-
         return true
     }
 
