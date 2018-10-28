@@ -12,23 +12,27 @@ target 'Checklists' do
   pod 'Alamofire-Synchronous', '~> 4.0'
   pod 'SwiftyJSON', '~> 4.0'
 
-  target 'ChecklistsTests' do
-    inherit! :search_paths
-    # Pods for testing
-    pod 'Quick'
-    pod 'Nimble'
-    pod 'RxBlocking', '~> 4.0'
-    pod 'RxTest',     '~> 4.0'
+  ['ChecklistsTests', 'ChecklistsUITestLocal', 'ChecklistsUITestIntegration'].each do |target_name|
+    target target_name do
+      inherit! :search_paths
+      # Pods for testing
+      pod 'Quick'
+      pod 'Nimble'
+      pod 'RxBlocking', '~> 4.0'
+      pod 'RxTest', '~> 4.0'
+      pod 'Swifter', '~> 1.4.5'
+    end
   end
 
-  target 'ChecklistsUITests' do
-    inherit! :search_paths
-    # Pods for testing
-    pod 'Quick'
-    pod 'Nimble'
-    pod 'RxBlocking', '~> 4.0'
-    pod 'RxTest',     '~> 4.0'
-    pod 'Swifter', '~> 1.4.5'
-  end
+
+  # target 'ChecklistsUITest' do
+  #   inherit! :search_paths
+  #   # Pods for testing
+  #   pod 'Quick'
+  #   pod 'Nimble'
+  #   pod 'RxBlocking', '~> 4.0'
+  #   pod 'RxTest',     '~> 4.0'
+  #   pod 'Swifter', '~> 1.4.5'
+  # end
 
 end

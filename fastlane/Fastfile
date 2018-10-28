@@ -14,8 +14,13 @@ platform :ios do
     )
   end
 
-  desc 'Run UI tests'
-  lane :ui_test do
-    scan(scheme: 'ChecklistsUITest')
+  desc 'Run Local UI tests'
+  lane :ui_test_local do
+    scan(scheme: 'ChecklistsUITestLocal')
+  end
+
+  desc 'Run Integration UI tests'
+  lane :ui_test_integration do
+    scan(scheme: 'ChecklistsUITestIntegration')
   end
 end

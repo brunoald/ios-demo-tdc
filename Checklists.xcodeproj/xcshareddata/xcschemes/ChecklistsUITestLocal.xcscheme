@@ -33,16 +33,6 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A1A3A802891C679160F894E35507738"
-               BuildableName = "ChecklistsTests.xctest"
-               BlueprintName = "ChecklistsTests"
-               ReferencedContainer = "container:Checklists.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "7314AB8B284FE90E3A8ECF310024F699"
                BuildableName = "ChecklistsUITestLocal.xctest"
                BlueprintName = "ChecklistsUITestLocal"
@@ -59,6 +49,13 @@
             ReferencedContainer = "container:Checklists.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "ENVIRONMENT"
+            value = "Local"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -82,6 +79,13 @@
             ReferencedContainer = "container:Checklists.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "ENVIRONMENT"
+            value = "Local"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>

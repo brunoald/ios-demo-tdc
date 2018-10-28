@@ -10,7 +10,7 @@ import Quick
 import Nimble
 import Swifter
 
-class ChecklistsUITests: QuickSpec {
+class LocalUITests: QuickSpec {
     override func spec() {
         describe("UI Tests") {
             let apiMock = APIMock()
@@ -32,7 +32,9 @@ class ChecklistsUITests: QuickSpec {
             it("performs a user flow") {
                 _ = robot
                     .tapOnItem(withText: "Item A")
+                    .tapOnDoneButton()
                     .tapOnItem(withText: "Item B")
+                    .tapOnDoneButton()
             }
         }
     }

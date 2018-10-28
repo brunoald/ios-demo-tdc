@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Checklists.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "60F58ACB218604D80038C48C"
+               BuildableName = "ChecklistsUITestIntegration.xctest"
+               BlueprintName = "ChecklistsUITestIntegration"
+               ReferencedContainer = "container:Checklists.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -33,9 +47,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7314AB8B284FE90E3A8ECF310024F699"
-               BuildableName = "ChecklistsUITests.xctest"
-               BlueprintName = "ChecklistsUITests"
+               BlueprintIdentifier = "60F58ACB218604D80038C48C"
+               BuildableName = "ChecklistsUITestIntegration.xctest"
+               BlueprintName = "ChecklistsUITestIntegration"
                ReferencedContainer = "container:Checklists.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -82,7 +96,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "ENVIRONMENT"
-            value = "Local"
+            value = "Integration"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

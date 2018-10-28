@@ -20,7 +20,7 @@ class APIMock {
             [
                 "id": 114,
                 "text": "Item B",
-                "checked": true,
+                "checked": false,
                 "created_at": "2018-10-28T01:22:25.151Z",
                 "updated_at": "2018-10-28T01:22:25.151Z",
                 "url": "https://ios-tdc-demo-api.herokuapp.com/items/114.json"

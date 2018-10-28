@@ -55,7 +55,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         navigationItem.largeTitleDisplayMode = .never
 
         if let item = itemToEdit {
-            title = "Edit item"
+            title = "Edit Item"
             textField.text = item.text
             doneBarButton.isEnabled = true
         }
