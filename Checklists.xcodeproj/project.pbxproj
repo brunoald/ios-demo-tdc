@@ -21,6 +21,10 @@
 		561D0CC5FB4BF7496BF0BD1F528B981C /* ItemDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0479C0F8DA0A5396BF77E15CB471B /* ItemDetailViewController.swift */; };
 		5AC8CB6F79AB5A14D1F4CCFBDB1E942E /* ChecklistRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAF895E03E33D9008392111F553D43C9 /* ChecklistRobot.swift */; };
 		5F9854625D434B12CE5D63E6799652D9 /* Pods_ChecklistsUITestLocal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84462B77214DFD2CDDCA044F2852E09 /* Pods_ChecklistsUITestLocal.framework */; };
+		60F58AE421861A4E0038C48C /* IntegrationEnvironmentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F58AE221861A410038C48C /* IntegrationEnvironmentSpec.swift */; };
+		60F58AE521861B6F0038C48C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA81480832C2CED36A61F1DD6D2287D /* Environment.swift */; };
+		60F58AE621861B6F0038C48C /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA81480832C2CED36A61F1DD6D2287D /* Environment.swift */; };
+		60F58AE921861BF10038C48C /* LocalEnvironmentSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60F58AE821861BF00038C48C /* LocalEnvironmentSpec.swift */; };
 		62FAFFD8934A360C31C8731DABEBDB8F /* BaseRobot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BC6931835A0A3119CF5FEB0CFD2FE8E /* BaseRobot.swift */; };
 		64FDD0BC33E8C47883322E148F78D948 /* ChecklistDataPersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537AEBED620C53C4D14BA813979DED43 /* ChecklistDataPersistence.swift */; };
 		67D5E266E357C9464E089B4D7537F9AE /* ChecklistDataProviderTypeMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471783747A1D1B569C347FDD6FDC3B82 /* ChecklistDataProviderTypeMock.swift */; };
@@ -84,6 +88,8 @@
 		537AEBED620C53C4D14BA813979DED43 /* ChecklistDataPersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistDataPersistence.swift; sourceTree = "<group>"; };
 		56EDE94173C5B6947FCF8A27F562103D /* ChecklistViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewControllerSpec.swift; sourceTree = "<group>"; };
 		602235184783867B312B5713B7BA80E7 /* ChecklistsUITestLocal.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChecklistsUITestLocal.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		60F58AE221861A410038C48C /* IntegrationEnvironmentSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegrationEnvironmentSpec.swift; sourceTree = "<group>"; };
+		60F58AE821861BF00038C48C /* LocalEnvironmentSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalEnvironmentSpec.swift; sourceTree = "<group>"; };
 		6189C84E1BCDB6DF0C980F2EA91BC94E /* ChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistViewController.swift; sourceTree = "<group>"; };
 		66AA40320E416F6C8C6AA01209809F7D /* ItemDetailViewControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailViewControllerSpec.swift; sourceTree = "<group>"; };
 		6D8C1B4D3B413AB0419426B7923989C2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -179,6 +185,7 @@
 		0E48AE4D641ACD654D34C93B8E331927 /* Integration */ = {
 			isa = PBXGroup;
 			children = (
+				60F58AE221861A410038C48C /* IntegrationEnvironmentSpec.swift */,
 				DC8EB281BC2CDC61D6DFCF4CA7307C18 /* IntegrationUITests.swift */,
 			);
 			path = Integration;
@@ -333,6 +340,7 @@
 		DA20F891D7C004693E4411ED27A195AA /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				60F58AE821861BF00038C48C /* LocalEnvironmentSpec.swift */,
 				D432984443441593085E9F822A4BAED6 /* APIMock.swift */,
 				90B7C8616A0FAD6984542CDC31BD3075 /* LocalUITests.swift */,
 				F72424B5F480C99550F44AEFB52F6348 /* MonkeyTest.swift */,
@@ -719,9 +727,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60F58AE421861A4E0038C48C /* IntegrationEnvironmentSpec.swift in Sources */,
 				62FAFFD8934A360C31C8731DABEBDB8F /* BaseRobot.swift in Sources */,
 				72605A5F1A1B0AA534C819BA2C15BECC /* ChecklistRobot.swift in Sources */,
 				232DF36A66793F6CE1B4C056244F8E77 /* IntegrationUITests.swift in Sources */,
+				60F58AE521861B6F0038C48C /* Environment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,8 +740,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B313522E0D69A00C13340EF8CFBDAE8E /* APIMock.swift in Sources */,
+				60F58AE621861B6F0038C48C /* Environment.swift in Sources */,
 				0E4734AA03D8C1DB36E796C2ED217A19 /* BaseRobot.swift in Sources */,
 				5AC8CB6F79AB5A14D1F4CCFBDB1E942E /* ChecklistRobot.swift in Sources */,
+				60F58AE921861BF10038C48C /* LocalEnvironmentSpec.swift in Sources */,
 				45BFD8DFD1503E2F0237C55974856CF5 /* LocalUITests.swift in Sources */,
 				7A6F1388C27E07A8D2391BC752B9ECFD /* MonkeyTest.swift in Sources */,
 			);
@@ -849,7 +861,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZ8P948NCH;
-				INFOPLIST_FILE = "ChecklistsUITestLocal copy-Info.plist";
+				INFOPLIST_FILE = ChecklistsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.capdev.lbarra.ChecklistsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -991,7 +1003,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZ8P948NCH;
-				INFOPLIST_FILE = "ChecklistsUITestLocal copy-Info.plist";
+				INFOPLIST_FILE = ChecklistsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.thoughtworks.capdev.lbarra.ChecklistsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

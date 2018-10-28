@@ -1,14 +1,5 @@
-//
-//  ChecklistsUITests.swift
-//  ChecklistsUITests
-//
-//  Created by Larissa Barra Conde on 27/03/18.
-//  Copyright © 2018 CapDev ThoughtWorks. All rights reserved.
-//
-
 import Quick
 import Nimble
-import Swifter
 
 class LocalUITests: QuickSpec {
     override func spec() {

@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "60F58ACB218604D80038C48C"
+               BlueprintIdentifier = "5872615BE8BBEB45011530AD1D9B5B7E"
                BuildableName = "ChecklistsUITestIntegration.xctest"
                BlueprintName = "ChecklistsUITestIntegration"
                ReferencedContainer = "container:Checklists.xcodeproj">
@@ -47,7 +47,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "60F58ACB218604D80038C48C"
+               BlueprintIdentifier = "5872615BE8BBEB45011530AD1D9B5B7E"
                BuildableName = "ChecklistsUITestIntegration.xctest"
                BlueprintName = "ChecklistsUITestIntegration"
                ReferencedContainer = "container:Checklists.xcodeproj">
