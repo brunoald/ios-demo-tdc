@@ -43,7 +43,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7314AB8B284FE90E3A8ECF310024F699"
+               BlueprintIdentifier = "CC11F681EECA7F87E6048445B29745D5"
                BuildableName = "ChecklistsUITestLocal.xctest"
                BlueprintName = "ChecklistsUITestLocal"
                ReferencedContainer = "container:Checklists.xcodeproj">

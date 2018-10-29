@@ -1,7 +1,7 @@
 import Foundation
 
 class Environment {
-    let environment = ProcessInfo.processInfo.environment["ENVIRONMENT"]!
+    let environment = ProcessInfo.processInfo.environment["ENVIRONMENT"] ?? "Integration"
 
     let configuration = [
         "Local": [
