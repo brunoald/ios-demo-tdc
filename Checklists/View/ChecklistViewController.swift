@@ -103,6 +103,15 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
 
     @objc func loadItems() {
+        var activityIndicator: UIActivityIndicatorView!
+        DispatchQueue.main.async {
+            activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+            activityIndicator.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
+            self.view.addSubview(activityIndicator)
+            
+            activityIndicator.frame = self.view.bounds
+            activityIndicator.startAnimating()
+        }
         _ = dataProvider.getItems()
             .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
             .subscribe(onNext: {
@@ -110,6 +119,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                     self.refreshControl?.endRefreshing()
+                    activityIndicator.removeFromSuperview()
                 }
             })
     }
