@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import ProgressHUD
 
 protocol ItemDetailViewControllerDelegate: class {
     func newItemAdded()
@@ -33,6 +34,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         if let itemText = textField.text {
             if let item = itemToEdit {
                 item.text = itemText
+                ProgressHUD.show()
                 dataProvider?.editItem(item: item)
                     .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
                     .subscribe (onCompleted: {
@@ -40,6 +42,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
                     })
 
             } else {
+                ProgressHUD.show()
                 dataProvider?.addItem(text: itemText, checked: false)
                     .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
                     .subscribe (onCompleted: {

@@ -7,6 +7,7 @@ target 'Checklists' do
   pod 'Alamofire', '~> 4.7'
   pod 'Alamofire-Synchronous', '~> 4.0'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'ProgressHUD'
 
   # Pods for testing
   %w[ChecklistsTests ChecklistsUITestLocal ChecklistsUITestIntegration].each do |target_name|

@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import RxSwift
+import ProgressHUD
 
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
 
@@ -16,12 +17,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigationController?.navigationBar.prefersLargeTitles = true
-
-        refreshControl = UIRefreshControl()
-        refreshControl?.addTarget(self, action: #selector(self.loadItems), for: .valueChanged)
-
         loadItems()
     }
 
@@ -72,11 +68,12 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         if let cell = tableView.cellForRow(at: indexPath) {
             let item = items[indexPath.row]
             item.toggleChecked()
-            configureCheckmark(for: cell, with: item)
+            ProgressHUD.show()
             dataProvider.editItem(item: item)
                 .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
                 .subscribe(onCompleted: {
                     self.loadItems()
+                    //self.configureCheckmark(for: cell, with: item)
                 })
         }
 
@@ -103,23 +100,14 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
 
     @objc func loadItems() {
-        var activityIndicator: UIActivityIndicatorView!
-        DispatchQueue.main.async {
-            activityIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-            activityIndicator.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.5)
-            self.view.addSubview(activityIndicator)
-            
-            activityIndicator.frame = self.view.bounds
-            activityIndicator.startAnimating()
-        }
+        ProgressHUD.show()
         _ = dataProvider.getItems()
             .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
             .subscribe(onNext: {
                 self.items = $0
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
-                    self.refreshControl?.endRefreshing()
-                    activityIndicator.removeFromSuperview()
+                    ProgressHUD.dismiss()
                 }
             })
     }
