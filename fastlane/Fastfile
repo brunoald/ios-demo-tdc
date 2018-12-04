@@ -1,6 +1,10 @@
 default_platform(:ios)
 
 platform :ios do
+  before_all do
+    ENV['FASTLANE_EXPLICIT_OPEN_SIMULATOR'] = '1'
+  end
+
   desc 'Run unit tests'
   lane :unit_test do
     scan(

@@ -23,7 +23,7 @@ class IntegrationUITests: QuickSpec {
             }
 
             it("performs a user flow") {
-                let uniqueId = UUID().uuidString
+                let uniqueId = Int(NSDate().timeIntervalSince1970)
                 let newItemName = "New Item \(uniqueId)"
                 let editedItemName = "Edited Item \(uniqueId)"
 
