@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3A1A3A802891C679160F894E35507738"
-               BuildableName = "ChecklistsTests.xctest"
-               BlueprintName = "ChecklistsTests"
+               BuildableName = "Unit Tests.xctest"
+               BlueprintName = "Unit Tests"
                ReferencedContainer = "container:Checklists.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -44,8 +44,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CC11F681EECA7F87E6048445B29745D5"
-               BuildableName = "ChecklistsUITestLocal.xctest"
-               BlueprintName = "ChecklistsUITestLocal"
+               BuildableName = "Integration Tests.xctest"
+               BlueprintName = "Integration Tests"
                ReferencedContainer = "container:Checklists.xcodeproj">
             </BuildableReference>
          </TestableReference>

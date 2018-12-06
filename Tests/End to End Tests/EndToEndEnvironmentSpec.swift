@@ -2,7 +2,7 @@ import Quick
 import Nimble
 @testable import Checklists
 
-class IntegrationEnvironmentSpec: QuickSpec {
+class EndToEndEnvironmentSpec: QuickSpec {
     override func spec() {
         describe("Environment") {
             context("for integration tests") {

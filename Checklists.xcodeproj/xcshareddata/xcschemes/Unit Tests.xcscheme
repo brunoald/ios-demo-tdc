@@ -20,20 +20,6 @@
                ReferencedContainer = "container:Checklists.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5872615BE8BBEB45011530AD1D9B5B7E"
-               BuildableName = "ChecklistsUITestIntegration.xctest"
-               BlueprintName = "ChecklistsUITestIntegration"
-               ReferencedContainer = "container:Checklists.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -47,9 +33,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5872615BE8BBEB45011530AD1D9B5B7E"
-               BuildableName = "ChecklistsUITestIntegration.xctest"
-               BlueprintName = "ChecklistsUITestIntegration"
+               BlueprintIdentifier = "3A1A3A802891C679160F894E35507738"
+               BuildableName = "Unit Tests.xctest"
+               BlueprintName = "Unit Tests"
                ReferencedContainer = "container:Checklists.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -63,13 +49,6 @@
             ReferencedContainer = "container:Checklists.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <EnvironmentVariables>
-         <EnvironmentVariable
-            key = "ENVIRONMENT"
-            value = "Local"
-            isEnabled = "YES">
-         </EnvironmentVariable>
-      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -96,7 +75,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "ENVIRONMENT"
-            value = "Integration"
+            value = "Local"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
@@ -104,7 +83,7 @@
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       shouldUseLaunchSchemeArgsEnv = "YES"
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
@@ -124,7 +103,7 @@
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

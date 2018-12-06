@@ -10,7 +10,7 @@ target 'Checklists' do
   pod 'ProgressHUD'
 
   # Pods for testing
-  %w[ChecklistsTests ChecklistsUITestLocal ChecklistsUITestIntegration].each do |target_name|
+  ['Unit Tests', 'Integration Tests', 'End to End Tests'].each do |target_name|
     target target_name do
       inherit! :search_paths
       pod 'Quick'

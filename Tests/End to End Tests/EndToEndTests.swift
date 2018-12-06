@@ -9,7 +9,7 @@
 import Quick
 import Nimble
 
-class IntegrationUITests: QuickSpec {
+class EndToEndTests: QuickSpec {
     override func spec() {
         describe("UI Tests") {
             var app: XCUIApplication!

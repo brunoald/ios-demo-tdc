@@ -1,16 +1,16 @@
 autocorrect_files:
 	swiftlint autocorrect --format
 
-unit_test:
-	bundle exec fastlane unit_test
+unit_tests:
+	bundle exec fastlane unit_tests
 
-ui_test_local:
-	bundle exec fastlane ui_test_local
+integration_tests:
+	bundle exec fastlane integration_tests
 
-ui_test_integration:
-	bundle exec fastlane ui_test_integration
+end_to_end_tests:
+	bundle exec fastlane end_to_end_tests
 
 tidy_project:
 	xunique -us Checklists.xcodeproj
 
-test_all: unit_test ui_test_local ui_test_integration
+test_all: unit_tests integration_tests end_to_end_tests

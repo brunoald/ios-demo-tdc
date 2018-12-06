@@ -2,25 +2,25 @@ default_platform(:ios)
 
 platform :ios do
   desc 'Run unit tests'
-  lane :unit_test do
+  lane :unit_tests do
     scan(
-      scheme: 'ChecklistsUnitTest',
+      scheme: 'Unit Tests',
       code_coverage: true
     )
     xcov(
-      scheme: 'ChecklistsUnitTest',
+      scheme: 'Unit Tests',
       minimum_coverage_percentage: 20.00,
       only_project_targets: true
     )
   end
 
-  desc 'Run Local UI tests'
-  lane :ui_test_local do
-    scan(scheme: 'ChecklistsUITestLocal')
+  desc 'Run Integration UI tests'
+  lane :integration_tests do
+    scan(scheme: 'Integration Tests')
   end
 
-  desc 'Run Integration UI tests'
-  lane :ui_test_integration do
-    scan(scheme: 'ChecklistsUITestIntegration')
+  desc 'Run End to End UI tests'
+  lane :end_to_end_tests do
+    scan(scheme: 'End to End Tests')
   end
 end
