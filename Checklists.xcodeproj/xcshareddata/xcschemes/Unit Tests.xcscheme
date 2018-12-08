@@ -33,7 +33,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3A1A3A802891C679160F894E35507738"
+               BlueprintIdentifier = "084CC429B5C558577B12AF10E6A9370A"
                BuildableName = "Unit Tests.xctest"
                BlueprintName = "Unit Tests"
                ReferencedContainer = "container:Checklists.xcodeproj">

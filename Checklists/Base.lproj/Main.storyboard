@@ -26,19 +26,16 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1000" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eho-vf-ntf">
-                                            <rect key="frame" x="39" y="12" width="253" height="21"/>
+                                            <rect key="frame" x="67" y="12" width="225" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1001" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="√" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkT-kQ-5s4">
-                                            <rect key="frame" x="16" y="11" width="13" height="21"/>
+                                        <imageView userInteractionEnabled="NO" tag="1001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="check-box" translatesAutoresizingMaskIntoConstraints="NO" id="eih-SU-Iz7">
+                                            <rect key="frame" x="11" y="4" width="38" height="37"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -143,7 +140,10 @@
             <point key="canvasLocation" x="59.200000000000003" y="109.74512743628186"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="check-box" width="800" height="800"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9ov-dl-Zlo"/>
+        <segue reference="8pn-lW-i8D"/>
     </inferredMetricsTieBreakers>
 </document>

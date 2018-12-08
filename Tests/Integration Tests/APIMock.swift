@@ -2,32 +2,30 @@ import Swifter
 
 class APIMock {
     let server = HttpServer()
+    var jsonResponse : [[String : Any]] = []
 
     init() {
         mockItems()
     }
+    
+    func addItem(id: Int, text: String) {
+        let item = [
+            "id": id,
+            "text": text,
+            "checked": false,
+            "created_at": "2018-10-28T01:22:25.118Z",
+            "updated_at": "2018-10-28T01:22:25.118Z"
+            ] as [String : Any]
+        
+        self.jsonResponse.append(item)
+        
+        mockItems()
+    }
+    
 
     private func mockItems() {
-        let jsonResponse = [
-            [
-                "id": 113,
-                "text": "Item A",
-                "checked": false,
-                "created_at": "2018-10-28T01:22:25.118Z",
-                "updated_at": "2018-10-28T01:22:25.118Z",
-                "url": "https://ios-tdc-demo-api.herokuapp.com/items/113.json"
-            ],
-            [
-                "id": 114,
-                "text": "Item B",
-                "checked": false,
-                "created_at": "2018-10-28T01:22:25.151Z",
-                "updated_at": "2018-10-28T01:22:25.151Z",
-                "url": "https://ios-tdc-demo-api.herokuapp.com/items/114.json"
-            ]
-        ]
         let response: ((HttpRequest) -> HttpResponse) = { _ in
-            return HttpResponse.ok(.json(jsonResponse as AnyObject))
+            return HttpResponse.ok(.json(self.jsonResponse as AnyObject))
         }
         server.GET["/items.json"] = response
     }

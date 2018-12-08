@@ -73,7 +73,6 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
                 .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
                 .subscribe(onCompleted: {
                     self.loadItems()
-                    //self.configureCheckmark(for: cell, with: item)
                 })
         }
 
@@ -90,8 +89,11 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
     /* class methods */
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
-        let label = cell.viewWithTag(1001) as! UILabel
-        label.text = item.checked ? "√" : ""
+        let box = cell.viewWithTag(1001) as! UIImageView
+        let imageName = item.checked ? "check-box" : "check-box-gray"
+        let imageDescription = item.checked ? "Checked" : "Unchecked"
+        box.image = UIImage(named: imageName)
+        box.accessibilityValue = imageDescription
     }
 
     func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
