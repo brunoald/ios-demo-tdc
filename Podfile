@@ -18,7 +18,6 @@ target 'Checklists' do
       pod 'RxBlocking', '~> 4.0'
       pod 'RxTest', '~> 4.0'
       pod 'Swifter', '~> 1.4.5'
-      pod 'SwiftMonkey', '~> 2.1.0'
     end
   end
 end

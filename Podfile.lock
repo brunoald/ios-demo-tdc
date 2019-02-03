@@ -1,19 +1,22 @@
 PODS:
-  - Alamofire (4.7.3)
+  - Alamofire (4.8.1)
   - Alamofire-Synchronous (4.0.0):
     - Alamofire (~> 4.0)
-  - Nimble (7.0.3)
+  - Nimble (7.3.3)
   - ProgressHUD (2.51)
-  - Quick (1.2.0)
-  - RxBlocking (4.0.0):
+  - Quick (1.3.4)
+  - RxAtomic (4.4.0)
+  - RxBlocking (4.4.0):
+    - RxAtomic (~> 4.4)
     - RxSwift (~> 4.0)
-  - RxCocoa (4.0.0):
+  - RxCocoa (4.4.0):
     - RxSwift (~> 4.0)
-  - RxSwift (4.0.0)
-  - RxTest (4.0.0):
+  - RxSwift (4.4.0):
+    - RxAtomic (~> 4.4)
+  - RxTest (4.4.0):
+    - RxAtomic (~> 4.4)
     - RxSwift (~> 4.0)
   - Swifter (1.4.5)
-  - SwiftMonkey (2.1.1)
   - SwiftyJSON (4.2.0)
 
 DEPENDENCIES:
@@ -27,7 +30,6 @@ DEPENDENCIES:
   - RxSwift (~> 4.0)
   - RxTest (~> 4.0)
   - Swifter (~> 1.4.5)
-  - SwiftMonkey (~> 2.1.0)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
@@ -37,28 +39,28 @@ SPEC REPOS:
     - Nimble
     - ProgressHUD
     - Quick
+    - RxAtomic
     - RxBlocking
     - RxCocoa
     - RxSwift
     - RxTest
     - Swifter
-    - SwiftMonkey
     - SwiftyJSON
 
 SPEC CHECKSUMS:
-  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
   Alamofire-Synchronous: eedf1e6e961c3795a63c74990b3f7d9fbfac7e50
-  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
+  Nimble: 3b434b1e7d0a92603a13550a82880b0d952f518e
   ProgressHUD: 54b4c2fa202bf3da7dddc1c698ae4e6376333bd9
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
-  RxBlocking: 923c2c8106d80d7c2d6b276afd66ce3b10824836
-  RxCocoa: d62846ca96495d862fa4c59ea7d87e5031d7340e
-  RxSwift: fd680d75283beb5e2559486f3c0ff852f0d35334
-  RxTest: 0041e792cede35e53e4749f378d21482af0e9d12
+  Quick: f4f7f063c524394c73ed93ac70983c609805d481
+  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
+  RxBlocking: 138ad53217434444d6eeeb4fb406a45431d92e31
+  RxCocoa: df63ebf7b9a70d6b4eeea407ed5dd4efc8979749
+  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  RxTest: 19d03286bdc0a3aaea5d61d4cde31fdf4bb8a5ba
   Swifter: eb2bc1d192a1c09169c7fefd01971565fa940521
-  SwiftMonkey: aea6f2707a4b7ab5277b4d2fd2f0723a083997b1
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
 
-PODFILE CHECKSUM: 5d8bd5e8c8bc783fb94a549ea7c545c009ea5def
+PODFILE CHECKSUM: 65072b7a796f64c4838116dca20a0eb22922422e
 
 COCOAPODS: 1.5.3
