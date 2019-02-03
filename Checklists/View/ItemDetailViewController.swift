@@ -16,52 +16,45 @@ protocol ItemDetailViewControllerDelegate: class {
     func itemEdited()
 }
 
-class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
+protocol ItemDetailView {
+    func enableDoneButton()
+    func disableDoneButton()
+    func showLoading()
+    func fillEditForm(content: String)
+    func setScreenTitle(screenTitle: String)
+    func showUpdatedItemList()
+    func close()
+}
 
+class ItemDetailViewController: UITableViewController, UITextFieldDelegate, ItemDetailView {
     @IBOutlet weak var doneBarButton: UIBarButtonItem!
     @IBOutlet weak var textField: UITextField!
-
+    
+    var presenter: ItemDetailPresenter!
     var delegate: ItemDetailViewControllerDelegate?
-    weak var dataProvider: ChecklistDataProviderType?
-
+    var dataProvider: ChecklistDataProviderType?
     var itemToEdit: ChecklistItem?
 
     @IBAction func cancel(_ sender: UIBarButtonItem) {
-        delegate?.actionCancelled()
+        presenter.handleClickCancel()
     }
 
     @IBAction func done(_ sender: Any) {
-        if let itemText = textField.text {
-            if let item = itemToEdit {
-                item.text = itemText
-                ProgressHUD.show()
-                dataProvider?.editItem(item: item)
-                    .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
-                    .subscribe (onCompleted: {
-                        self.delegate?.itemEdited()
-                    })
-
-            } else {
-                ProgressHUD.show()
-                dataProvider?.addItem(text: itemText, checked: false)
-                    .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
-                    .subscribe (onCompleted: {
-                        self.delegate?.newItemAdded()
-                    })
-            }
-        }
+        presenter.handleClickDone()
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        presenter.changedTitle(title: textField.text!)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        presenter = ItemDetailPresenter(view: self, itemToEdit: itemToEdit, dataProvider: dataProvider!)
+        presenter.start()
+        
         navigationItem.largeTitleDisplayMode = .never
+        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
 
-        if let item = itemToEdit {
-            title = "Edit Item"
-            textField.text = item.text
-            doneBarButton.isEnabled = true
-        }
     }
 
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
@@ -72,13 +65,33 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         super.viewWillAppear(animated)
         textField.becomeFirstResponder()
     }
-
-    /* text field delegate */
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let oldText = textField.text!
-        let stringRange = Range(range, in: oldText)!
-        let newText = oldText.replacingCharacters(in: stringRange, with: string)
-        doneBarButton.isEnabled = !newText.isEmpty
-        return true
+    
+    func enableDoneButton() {
+        doneBarButton.isEnabled = true
+    }
+    
+    func disableDoneButton() {
+        doneBarButton.isEnabled = false
+    }
+    
+    func showLoading() {
+        ProgressHUD.show()
+    }
+    
+    func setScreenTitle(screenTitle: String) {
+        title = screenTitle
+    }
+    
+    func fillEditForm(content: String) {
+        textField.text = content
+    }
+    
+    func showUpdatedItemList() {
+        self.delegate?.itemEdited()
+    }
+    
+    func close() {
+        delegate?.actionCancelled()
+        self.navigationController?.popViewController(animated: true)
     }
 }

@@ -14,6 +14,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
 
     var dataProvider: ChecklistDataProviderType!
     var items: [ChecklistItem] = []
+    var itemDetailScreen: ItemDetailViewController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let itemDetailScreen = segue.destination as! ItemDetailViewController
+        itemDetailScreen = segue.destination as! ItemDetailViewController
         itemDetailScreen.delegate = self
         itemDetailScreen.dataProvider = dataProvider
 
@@ -45,7 +46,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
     }
 
     func actionCancelled() {
-        dismissItemDetailScreen()
+        // Do nothing
     }
 
     /* Data Source section */

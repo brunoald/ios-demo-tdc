@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		032EC2B322071B01000A8E16 /* ItemDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 032EC2B222071B01000A8E16 /* ItemDetailPresenter.swift */; };
 		061CC3A80DA207C22923B6B9A2AB469A /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6189C84E1BCDB6DF0C980F2EA91BC94E /* ChecklistViewController.swift */; };
 		0E6B385C8DC1229F200420E96DF19F3E /* ChecklistDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D43AEE865688E1AC7B99A46A6561E6 /* ChecklistDataProvider.swift */; };
 		17DA3E74618DEE4710279B35D77AFD88 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA81480832C2CED36A61F1DD6D2287D /* Environment.swift */; };
@@ -71,6 +72,7 @@
 /* Begin PBXFileReference section */
 		0200972191F4CBC2AF25524FD3BECCD2 /* Pods-Unit Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Unit Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Unit Tests/Pods-Unit Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		0311826DA68BA311CF2DB4824E585C57 /* BaseRobot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRobot.swift; sourceTree = "<group>"; };
+		032EC2B222071B01000A8E16 /* ItemDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailPresenter.swift; sourceTree = "<group>"; };
 		0B3C3D3EF145297648D633CFABA67000 /* APIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIMock.swift; sourceTree = "<group>"; };
 		121EAC2F9A050F0019FE5158CA1B3C53 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B961F5A81AE4BC3577444C9C1F0321E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				6189C84E1BCDB6DF0C980F2EA91BC94E /* ChecklistViewController.swift */,
 				27A0479C0F8DA0A5396BF77E15CB471B /* ItemDetailViewController.swift */,
+				032EC2B222071B01000A8E16 /* ItemDetailPresenter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -746,6 +749,7 @@
 				A3A32C522E0414134E0CD0AF053309CA /* AppDelegate.swift in Sources */,
 				64FDD0BC33E8C47883322E148F78D948 /* ChecklistDataPersistence.swift in Sources */,
 				8A600BA4F92829D933D25F4DA87B4E54 /* ChecklistDataPersistenceRest.swift in Sources */,
+				032EC2B322071B01000A8E16 /* ItemDetailPresenter.swift in Sources */,
 				0E6B385C8DC1229F200420E96DF19F3E /* ChecklistDataProvider.swift in Sources */,
 				EE493660A68A79FD1D07B0B20B29C2E2 /* ChecklistItem.swift in Sources */,
 				061CC3A80DA207C22923B6B9A2AB469A /* ChecklistViewController.swift in Sources */,
