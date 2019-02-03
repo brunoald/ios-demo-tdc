@@ -1,7 +1,7 @@
 import RxSwift
 
 class ItemDetailPresenter {
-    var view: ItemDetailView!
+    weak var view: ItemDetailView!
     var itemToEdit: ChecklistItem?
     var currentTitle: String?
     var dataProvider: ChecklistDataProviderType?
@@ -40,17 +40,17 @@ class ItemDetailPresenter {
                 view.showLoading()
                 _ = dataProvider?.editItem(item: item)
                     .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
-                    .subscribe (onCompleted: {
+                    .subscribe {
                         self.view.showUpdatedItemList()
-                    })
+                    }
                 
             } else {
                 view.showLoading()
                 _ = dataProvider?.addItem(text: itemText, checked: false)
                     .subscribeOn(SerialDispatchQueueScheduler(qos: .background))
-                    .subscribe (onCompleted: {
+                    .subscribe {
                         self.view.showUpdatedItemList()
-                    })
+                    }
             }
         }
     }

@@ -8,6 +8,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 import ProgressHUD
 
 protocol ItemDetailViewControllerDelegate: class {
@@ -16,7 +17,7 @@ protocol ItemDetailViewControllerDelegate: class {
     func itemEdited()
 }
 
-protocol ItemDetailView {
+protocol ItemDetailView: class {
     func enableDoneButton()
     func disableDoneButton()
     func showLoading()
@@ -53,7 +54,11 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate, Item
         presenter.start()
         
         navigationItem.largeTitleDisplayMode = .never
-        textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+        _ = textField.rx.controlEvent([.editingChanged])
+            .asObservable()
+            .subscribe(onNext: {
+                self.presenter.changedTitle(title: self.textField.text!)
+            })
 
     }
 
@@ -93,5 +98,9 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate, Item
     func close() {
         delegate?.actionCancelled()
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    deinit {
+        print("Destroyed ItemDetailViewController")
     }
 }
